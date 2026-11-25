@@ -1,13 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import nusamandiri from "../../../../public/logo universitas nusa mandiri.png";
-import bima from "../../../../public/logo bima.png";
+
 import { Lock, Phone, Eye, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function LupaPasswordSection() {
-const kementrian = "/kementrian-logo.png";
 
   return (
     <>
@@ -28,22 +25,6 @@ const kementrian = "/kementrian-logo.png";
             <p className="mx-auto mt-2 max-w-2xl text-xs leading-relaxed text-slate-700 md:text-sm">
               Basis Informasi gizi anak
             </p>
-          </div>
-
-          {/* Logo */}
-          <div className="relative z-10 -mt-7 flex items-center justify-center gap-3 md:-mt-9 md:gap-5">
-            {[kementrian, bima, nusamandiri].map((logo, index) => (
-              <div
-                key={index}
-                className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-white shadow-lg md:h-[72px] md:w-[72px]"
-              >
-                <Image
-                  src={logo}
-                  alt={`logo-${index}`}
-                  className="h-8 w-8 object-contain md:h-10 md:w-10"
-                />
-              </div>
-            ))}
           </div>
 
           {/* Form */}

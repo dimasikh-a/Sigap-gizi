@@ -1,10 +1,7 @@
 // components/sidebar.tsx
 
 "use client";
-import unm from "../../../../public/logo universitas nusa mandiri.png";
 import { logoutAction } from "@/features/landing/auth/form/logout";
-import bima from "../../../../public/logo bima.png";
-import Image from "next/image";
 import Link from "next/link";
 import { LogOut } from "lucide-react";
 import { usePathname } from "next/navigation";

@@ -6,9 +6,6 @@ import { useState, useActionState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { loginAction } from "../auth/form/login";
-import Image from "next/image";
-import nusamandiri from "../../../../public/logo universitas nusa mandiri.png";
-import bima from "../../../../public/logo bima.png";
 
 export default function LoginSection() {
   const [state, formAction, isPending] = useActionState(loginAction, null);
