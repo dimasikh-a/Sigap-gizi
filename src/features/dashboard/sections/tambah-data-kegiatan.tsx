@@ -1,5 +1,5 @@
 "use client";
-import { User, ClipboardList } from "lucide-react";
+import { ClipboardList } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { useActionState } from "react";
@@ -14,12 +14,13 @@ export default function DataKegiatanForm() {
   useEffect(() => {
     if (state?.success) {
       toast.success(state.success);
+      router.push("/admin/dashboard/data-kegiatan");
     }
 
     if (state?.error) {
       toast.error(state.error);
     }
-  }, [state]);
+  }, [state, router]);
 
   return (
     <section className="min-h-screen w-full bg-[#f5f7fb] mt-20">
@@ -53,7 +54,7 @@ export default function DataKegiatanForm() {
                   rounded-full
                   bg-gradient-to-br
                   from-cyan-500
-                  to-teal-500
+                  to-sky-500
                   flex
                   items-center
                   justify-center

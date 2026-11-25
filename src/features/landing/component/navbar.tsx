@@ -6,9 +6,6 @@ import { CalendarDays, Phone, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState,useEffect } from "react";
 
-import nusamandiri from "../../../../public/logo universitas nusa mandiri.png";
-import bima from "../../../../public/logo bima.png";
-
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +35,7 @@ export default function Navbar() {
   return (
     <nav className="w-full border-b fixed border-slate-200 z-50">
       {/* Top Navbar */}
-      <div className="flex justify-between bg-teal-600 md:px-8 px-2 py-4 text-white">
+      <div className="flex justify-between bg-sky-500 md:px-8 px-2 py-4 text-white">
         <div className="flex items-center gap-2">
           <CalendarDays size={18} />
           <p className="text-[10px] md:text-base">
@@ -64,31 +61,7 @@ export default function Navbar() {
         )}
         <div className="flex items-center justify-between px-4 md:px-8 py-4">
           {/* Logo */}
-          <div className="flex items-center gap-2 md:gap-3">
-            <Image
-              src="/logo-kementerian.png"
-              alt="Kementrian"
-              width={40}
-              height={40}
-              className="object-contain"
-            />
 
-            <Image
-              src={bima}
-              alt="Bima"
-              width={60}
-              height={60}
-              className="object-contain"
-            />
-
-            <Image
-              src={nusamandiri}
-              alt="Nusa Mandiri"
-              width={40}
-              height={40}
-              className="object-contain"
-            />
-          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
@@ -103,8 +76,8 @@ export default function Navbar() {
                     relative pb-2 text-base font-medium transition-all duration-300
                     ${
                       isActive
-                        ? "text-teal-600"
-                        : "text-slate-700 hover:text-teal-600"
+                        ? "text-sky-500"
+                        : "text-slate-700 hover:text-sky-500"
                     }
                   `}
                 >
@@ -112,7 +85,7 @@ export default function Navbar() {
 
                   <span
                     className={`
-                      absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-teal-600 transition-all duration-300
+                      absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-sky-500 transition-all duration-300
                       ${isActive ? "scale-x-100" : "scale-x-0"}
                     `}
                   />
@@ -123,12 +96,12 @@ export default function Navbar() {
             <Link
               href="/login"
               className="
-                rounded-lg border-2 border-teal-600
-                bg-teal-600 px-5 py-2
+                rounded-lg border-2 border-sky-500
+                bg-sky-500 px-5 py-2
                 text-base font-medium text-white
                 transition-all duration-300
                 hover:bg-white
-                hover:text-teal-600
+                hover:text-sky-500
               "
             >
               Login
@@ -177,7 +150,7 @@ export default function Navbar() {
                 href="/login"
                 onClick={() => setIsOpen(false)}
                 className="
-                  rounded-lg bg-teal-600 py-3 text-center
+                  rounded-lg bg-sky-500 py-3 text-center
                   font-medium text-white
                 "
               >

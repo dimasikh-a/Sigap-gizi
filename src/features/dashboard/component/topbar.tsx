@@ -19,7 +19,7 @@ export default function DashboardHeader({
         z-50
         overflow-hidden
         rounded-b-[10px]
-        bg-teal-600
+        bg-sky-500
         shadow-lg
       "
     >

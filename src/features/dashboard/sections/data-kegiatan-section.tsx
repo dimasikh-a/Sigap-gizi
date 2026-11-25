@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {  Search, UserPlus } from "lucide-react";
+import { Search, UserPlus } from "lucide-react";
 import { deleteActivity } from "@/features/kegiatan/delete-activity";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -57,10 +57,41 @@ export default function DataActivitySection({
   return (
     <div className="mt-20 font-mono w-full min-w-0">
       <div className="min-h-screen bg-[#F7FAFC] w-full">
+
+        {/* MODAL KONFIRMASI HAPUS */}
+        {openDelete && selectedActivity && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+            <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-sm flex flex-col items-center gap-5">
+              <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="text-red-600" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                </svg>
+              </div>
+              <div className="text-center">
+                <h2 className="text-lg font-bold text-slate-800">Hapus Data Kegiatan?</h2>
+                <p className="mt-1 text-sm text-slate-500">Data yang dihapus tidak dapat dikembalikan.</p>
+              </div>
+              <div className="flex gap-3 w-full">
+                <button
+                  onClick={() => setOpenDelete(false)}
+                  className="flex-1 h-11 rounded-xl border-2 border-slate-300 text-slate-600 font-semibold hover:bg-slate-50 transition"
+                >
+                  Batal
+                </button>
+                <button
+                  onClick={handleDelete}
+                  className="flex-1 h-11 rounded-xl bg-red-600 text-white font-semibold hover:bg-red-700 transition"
+                >
+                  Ya, Hapus
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
         {/* HEADER */}
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h1 className="text-2xl font-semibold text-teal-600">
+            <h1 className="text-2xl font-semibold text-sky-500">
               Data Kegiatan
             </h1>
 
@@ -72,7 +103,7 @@ export default function DataActivitySection({
           {canCreate && (
           <Link
             href="/admin/dashboard/data-kegiatan/tambah-data"
-            className="flex items-center justify-center gap-3 bg-teal-600 hover:opacity-90 transition text-white font-semibold px-4 py-3 rounded-xl shadow-sm"
+            className="flex items-center justify-center gap-3 bg-sky-500 hover:opacity-90 transition text-white font-semibold px-4 py-3 rounded-xl shadow-sm"
           >
             <UserPlus size={22} />
             <span>Tambah Data</span>
@@ -124,7 +155,7 @@ export default function DataActivitySection({
         ml-2
         h-11
         rounded-lg
-        bg-teal-600
+        bg-sky-500
         px-4
         text-white
         cursor-pointer
@@ -274,32 +305,25 @@ export default function DataActivitySection({
 
                         {/* DELETE */}
                         {canDelete && (
-                        <form
-                          action={deleteActivity.bind(
-                            null,
-                            kegiatan.idkegiatan,
-                          )}
-                        >
                           <button
+                            type="button"
                             onClick={() => {
                               setselectedActivity({
                                 idkegiatan: kegiatan.idkegiatan,
                               });
-
                               setOpenDelete(true);
                             }}
-    className="
-      flex h-10 items-center justify-center
-      rounded-lg px-4
-      bg-red-100 text-red-700
-      font-medium
-      transition-all duration-200
-      hover:bg-red-200 hover:text-red-800
-    "
+                            className="
+                              flex h-10 items-center justify-center
+                              rounded-lg px-4
+                              bg-red-100 text-red-700
+                              font-medium
+                              transition-all duration-200
+                              hover:bg-red-200 hover:text-red-800
+                            "
                           >
-                           Hapus
+                            Hapus
                           </button>
-                        </form>
                         )}
                       </div>
                     </td>
@@ -310,14 +334,14 @@ export default function DataActivitySection({
                 {kegiatans.length === 0 && (
                   <tr>
                     <td
-                      colSpan={7}
+                      colSpan={8}
                       className="
                         py-10
                         text-center
                         text-slate-500
                       "
                     >
-                      Belum ada data user
+                      Belum ada data kegiatan
                     </td>
                   </tr>
                 )}
@@ -358,7 +382,7 @@ export default function DataActivitySection({
           cursor-pointer
         ${
           currentPage === page
-            ? "bg-teal-600 text-white"
+            ? "bg-sky-500 text-white"
             : "bg-white text-slate-500 border border-slate-500"
         }
       `}

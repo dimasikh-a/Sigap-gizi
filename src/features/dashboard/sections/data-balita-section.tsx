@@ -43,7 +43,7 @@ export default function DataBabyPage({
         {/* HEADER */}
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h1 className="text-2xl font-semibold text-teal-600">
+            <h1 className="text-2xl font-semibold text-sky-500">
               Data Balita
             </h1>
 
@@ -54,7 +54,7 @@ export default function DataBabyPage({
           {canCreate && (
             <Link
               href="/admin/dashboard/data-balita/tambah-data"
-              className="flex items-center justify-center gap-3 bg-teal-600 hover:opacity-90 transition text-white font-semibold px-4 py-3 rounded-xl shadow-sm"
+              className="flex items-center justify-center gap-3 bg-sky-500 hover:opacity-90 transition text-white font-semibold px-4 py-3 rounded-xl shadow-sm"
             >
               <UserPlus size={22} />
               <span>Tambah Data</span>
@@ -107,7 +107,7 @@ export default function DataBabyPage({
         ml-2
         h-11
         rounded-lg
-        bg-teal-600
+        bg-sky-500
         px-4
         text-white
         cursor-pointer
@@ -394,7 +394,7 @@ export default function DataBabyPage({
           cursor-pointer
         ${
           currentPage === page
-            ? "bg-teal-600 text-white"
+            ? "bg-sky-500 text-white"
             : "bg-white text-slate-500 border border-slate-500"
         }
       `}

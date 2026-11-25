@@ -5,7 +5,7 @@ import { PAGE, ACTION } from "@/lib/permission";
 
 export default async function DashboardPage() {
   await authorize(
-    PAGE.PARENT,
+    PAGE.KEGIATAN,
     ACTION.CREATE
   );
   return (

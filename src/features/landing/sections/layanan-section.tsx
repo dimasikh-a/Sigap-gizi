@@ -71,7 +71,7 @@ export default function LayananSection() {
         {/* HEADER */}
         <div className="text-center mb-10">
 
-              <p className="text-teal-600 font-semibold text-3xl">
+              <p className="text-sky-500 font-semibold text-3xl">
                 Layanan Posyandu
               </p>
 
@@ -103,7 +103,7 @@ export default function LayananSection() {
                 
                 {/* LEFT */}
                 <div className="flex flex-col md:flex-row items-center gap-4">
-                  <div className="md:w-9 md:h-9 w-7 h-7 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 flex items-center justify-center text-white shadow-lg">
+                  <div className="md:w-9 md:h-9 w-7 h-7 rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 flex items-center justify-center text-white shadow-lg">
                     {item.icon}
                   </div>
 

@@ -2,7 +2,7 @@ export default function BottomBar() {
   return (
     <footer
       className="
-    bg-teal-600
+    bg-sky-500
     text-white
     px-8
     py-5
@@ -15,17 +15,15 @@ export default function BottomBar() {
       {/* LEFT */}
       <div className="max-w-[80%]">
         <p className="text-[11px] leading-relaxed font-medium">
-          Aplikasi Satu Klik Gizi Posyandu Gurame Kelurahan Pamulang Timur oleh
-          Tim Universitas Nusa Mandiri
-          <br />
-          (Hibah Kemediktisaintek Tahun Anggaran 2026)
+          Aplikasi SIGAP Gizi Posyandu Dukuh Kelurahan Tanah Baru oleh
+          Tim Mahasiswa Universitas Nusa Mandiri
         </p>
       </div>
 
       {/* RIGHT */}
       <div>
         <p className="text-[13px] font-medium whitespace-nowrap">
-          © 2025 Satu Klik Gizi. All rights reserved.
+          © 2026 SIGAP Gizi. All rights reserved.
         </p>
       </div>
     </footer>

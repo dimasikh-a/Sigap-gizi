@@ -146,7 +146,7 @@ export default function DashboardSection({
       ====================================================== */}
 
       <div className="mb-6 text-center sm:mb-8">
-        <h1 className="text-2xl font-bold tracking-tight text-teal-600 sm:text-3xl">
+        <h1 className="text-2xl font-bold tracking-tight text-sky-500 sm:text-3xl">
           Data Status Gizi Balita
         </h1>
       </div>

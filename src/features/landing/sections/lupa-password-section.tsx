@@ -22,12 +22,11 @@ const kementrian = "/kementrian-logo.png";
             <div className="absolute -bottom-10 -right-10 h-44 w-44 rounded-full bg-white/10"></div>
 
             <h1 className="text-lg font-extrabold text-slate-900 md:text-2xl">
-              Selamat datang di aplikasi Satu Klik Gizi
+              Selamat datang di aplikasi SIGAP Gizi
             </h1>
 
             <p className="mx-auto mt-2 max-w-2xl text-xs leading-relaxed text-slate-700 md:text-sm">
-              Basis Informasi Pencegahan Demam Berdarah Dengue Kelurahan
-              Pamulang Timur
+              Basis Informasi gizi anak
             </p>
           </div>
 

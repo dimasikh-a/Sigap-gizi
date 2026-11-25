@@ -52,7 +52,7 @@ export default function DataUserForm() {
                   rounded-full
                   bg-gradient-to-br
                   from-cyan-500
-                  to-teal-500
+                  to-sky-500
                   flex
                   items-center
                   justify-center

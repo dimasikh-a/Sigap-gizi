@@ -73,7 +73,7 @@ export default function DataRekomendasi({
 
             {/* ICON */}
             <div className="flex h-20 w-20 items-center justify-center rounded-full">
-              <div className="flex h-13 w-13 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-teal-500">
+              <div className="flex h-13 w-13 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-sky-500">
                 <ClipboardPlus
                   size={25}
                   className="text-white"

@@ -18,7 +18,6 @@ export default async function DashboardPage({
 
   const currentPage = Number(page) || 1;
   const { kegiatan, totalPages } = await getActivities(q, currentPage);
-  console.log(kegiatan[0]);
   return (
     <div className=" bg-[#F7FAFC] flex">
       <DataActivitySection

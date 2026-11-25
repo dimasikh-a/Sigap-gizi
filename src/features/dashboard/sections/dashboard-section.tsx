@@ -130,7 +130,7 @@ export default function DashboardSection({
   return (
     <div className="mt-20 bg-white font-mono">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold tracking-tight text-teal-600">
+        <h1 className="text-3xl font-bold tracking-tight text-sky-500">
           Data Status Gizi Balita
         </h1>
       </div>

@@ -161,8 +161,8 @@ export default function LaporanSection({
               items-center
               justify-center
               rounded-xl
-              bg-teal-100
-              text-teal-600
+              bg-sky-100
+              text-sky-500
             "
           >
             <FileText size={24} />
@@ -236,9 +236,9 @@ export default function LaporanSection({
                     text-gray-700
                     outline-none
                     transition
-                    focus:border-teal-500
+                    focus:border-sky-500
                     focus:ring-2
-                    focus:ring-teal-100
+                    focus:ring-sky-100
                   "
                 >
                   <option
@@ -292,9 +292,9 @@ export default function LaporanSection({
                     text-gray-700
                     outline-none
                     transition
-                    focus:border-teal-500
+                    focus:border-sky-500
                     focus:ring-2
-                    focus:ring-teal-100
+                    focus:ring-sky-100
                   "
                 >
                   <option
@@ -337,7 +337,7 @@ export default function LaporanSection({
                   items-center
                   gap-2
                   rounded-xl
-                  bg-teal-600
+                  bg-sky-600
                   px-8
                   py-3
                   font-medium
@@ -345,7 +345,7 @@ export default function LaporanSection({
                   shadow-md
                   transition-all
                   duration-200
-                  hover:bg-teal-700
+                  hover:bg-sky-700
                   hover:shadow-lg
                   active:scale-95
                 "
@@ -405,9 +405,9 @@ export default function LaporanSection({
                   placeholder:text-gray-400
                   outline-none
                   transition
-                  focus:border-teal-500
+                  focus:border-sky-500
                   focus:ring-2
-                  focus:ring-teal-100
+                  focus:ring-sky-100
                 "
               />
             </div>
@@ -426,7 +426,7 @@ export default function LaporanSection({
                   items-center
                   gap-2
                   rounded-xl
-                  bg-teal-600
+                  bg-sky-600
                   px-8
                   py-3
                   font-medium
@@ -434,7 +434,7 @@ export default function LaporanSection({
                   shadow-md
                   transition-all
                   duration-200
-                  hover:bg-teal-700
+                  hover:bg-sky-700
                   hover:shadow-lg
                   active:scale-95
                 "
@@ -468,7 +468,7 @@ export default function LaporanSection({
               items-center
               justify-center
               rounded-full
-              bg-teal-600
+              bg-sky-600
             "
           >
             <Info
@@ -477,7 +477,7 @@ export default function LaporanSection({
             />
           </div>
 
-          <p className="text-teal-700">
+          <p className="text-sky-700">
             Pastikan data yang dimasukkan
             sudah benar sebelum melakukan
             generate laporan.

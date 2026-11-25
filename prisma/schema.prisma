@@ -8,138 +8,80 @@ datasource db {
 }
 
 model balita {
-  idbalita Int @id @default(autoincrement())
-
+  idbalita     Int           @id @default(autoincrement())
   id_orang_tua Int
-
-  nokk String
-
-  nik_anak String? @unique
-
-  namaanak String
-
+  nik_anak     String?       @unique
+  namaanak     String
   jeniskelamin String
-
-  tanggallahir DateTime @db.Date
-
-  bblahir Int?
-
-  tblahir Int?
-
-  anakke Int?
-
-  imd Boolean?
-
-  buku_kia Boolean?
-
-  is_active Boolean @default(true)
-
-  orang_tua orang_tua @relation(fields: [id_orang_tua], references: [id_orang_tua])
-
-  pemeriksaan pemeriksaan[]
+  tanggallahir DateTime      @db.Date
+  bblahir      Int?
+  tblahir      Int?
+  anakke       Int?
+  imd          Boolean?
+  buku_kia     Boolean?
+  is_active    Boolean       @default(true)
+  nokk         String
+  orang_tua    orang_tua     @relation(fields: [id_orang_tua], references: [id_orang_tua])
+  pemeriksaan  pemeriksaan[]
 }
 
 model orang_tua {
-
-  id_orang_tua Int @id @default(autoincrement())
-
-  id_user      Int? @unique
-
-  nokk         String @unique
-
+  id_orang_tua Int      @id @default(autoincrement())
+  id_user      Int?     @unique
+  nokk         String   @unique
   nik_ayah     String?
-
   nama_ayah    String?
-
   nik_ibu      String
-
   nama_ibu     String
-
   no_telp_hp   String
-
   alamat       String
-
   rt           String
-
   rw           String
-
-  is_active    Boolean @default(true)
-
-user users? @relation(fields: [id_user], references: [id_user])
-
-  balita balita[]
+  is_active    Boolean  @default(true)
+  balita       balita[]
+  user         users?   @relation(fields: [id_user], references: [id_user])
 }
 
 model pemeriksaan {
-  idperiksa Int @id @default(autoincrement())
-
-  idbalita Int
-
-  tglperiksa DateTime @db.Date
-
-  bb Decimal @db.Decimal(5,2)
-
-  tb Decimal @db.Decimal(5,2)
-
-cara_pengukuran String?
-
-  asi_eksklusif String?
-
-  statusbb String?
-
-  statustb String?
-
-  hasilgizi String?
-
-  umur_bulan Int
-
+  idperiksa        Int          @id @default(autoincrement())
+  idbalita         Int
+  tglperiksa       DateTime     @db.Date
+  bb               Decimal      @db.Decimal(5, 2)
+  tb               Decimal      @db.Decimal(5, 2)
+  asi_eksklusif    String?
+  statusbb         String?
+  statustb         String?
+  hasilgizi        String?
+  umur_bulan       Int
   idrekomendasi_bb Int?
-
   idrekomendasi_tb Int?
-
-  is_active    Boolean @default(true)
-
-  rekomendasi rekomendasi?
-
-  balita balita @relation(fields: [idbalita], references: [idbalita])
+  is_active        Boolean      @default(true)
+  cara_pengukuran  String?
+  balita           balita       @relation(fields: [idbalita], references: [idbalita])
+  rekomendasi      rekomendasi?
 }
 
 model rekomendasi {
-  idrekomendasi Int @id @default(autoincrement())
-
-  idperiksa Int @unique
-
-  deskripsi String @db.Text
-
-  created_at DateTime @default(now())
-
-  updated_at DateTime @updatedAt
-
-  is_active Boolean @default(true)
-  
-  pemeriksaan pemeriksaan @relation(fields: [idperiksa], references: [idperiksa], onDelete: Cascade)
-
+  idrekomendasi Int         @id @default(autoincrement())
+  idperiksa     Int         @unique
+  deskripsi     String
+  created_at    DateTime    @default(now())
+  updated_at    DateTime    @updatedAt
+  is_active     Boolean     @default(true)
+  pemeriksaan   pemeriksaan @relation(fields: [idperiksa], references: [idperiksa], onDelete: Cascade)
 }
 
 /// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
 model users {
-  id_user Int @id @default(autoincrement())
-
-  nama_user String
-
-  no_telp_hp String @unique
-
+  id_user     Int        @id @default(autoincrement())
+  nama_user   String
+  no_telp_hp  String     @unique
+  password    String
+  status      String
+  is_active   Boolean    @default(true)
   alamat_user String
-
-  jabatan String
-
-  password String
-
-  status String
-
-  is_active Boolean @default(true)
-
-  orang_tua orang_tua?
+  jabatan     String
+  orang_tua   orang_tua?
 }
 
 model kegiatan {
@@ -156,25 +98,17 @@ model kegiatan {
 }
 
 model who_weight_for_age {
-  id Int @id @default(autoincrement())
-
+  id            Int     @id @default(autoincrement())
   jenis_kelamin String
-
-  umur_bulan Int
-
-  sd String
-
-  nilai Decimal @db.Decimal(5,2)
+  umur_bulan    Int
+  sd            String
+  nilai         Decimal @db.Decimal(5, 2)
 }
 
 model who_height_for_age {
-  id Int @id @default(autoincrement())
-
+  id            Int     @id @default(autoincrement())
   jenis_kelamin String
-
-  umur_bulan Int
-
-  sd String
-
-  nilai Decimal @db.Decimal(5,2)
+  umur_bulan    Int
+  sd            String
+  nilai         Decimal @db.Decimal(5, 2)
 }

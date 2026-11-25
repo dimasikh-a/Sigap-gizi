@@ -5,7 +5,7 @@ import { HeartPulse } from "lucide-react";
 export default function FooterBanner() {
   return (
     <footer className="w-full">
-      <div className="bg-teal-600 px-8 py-6 shadow-lg">
+      <div className="bg-sky-500 px-8 py-6 shadow-lg">
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
           
           {/* LEFT */}
@@ -16,11 +16,11 @@ export default function FooterBanner() {
 
             <div>
               <h2 className="text-white text-base font-bold">
-                Aplikasi Satu Klik Gizi
+                Aplikasi SIGAP Gizi
               </h2>
 
               <p className="text-white/90 text-sm md:text-base mt-0.5">
-                Posyandu Gurame Kelurahan Pamulang Timur
+                Posyandu Dukuh keluran Tanah Baru
               </p>
             </div>
           </div>
@@ -28,11 +28,11 @@ export default function FooterBanner() {
           {/* RIGHT */}
           <div className="text-center md:text-right">
             <p className="text-white text-sm md:text-base">
-              oleh Tim Universitas Nusa Mandiri
+              oleh mahasiswa Universitas Nusa Mandiri
             </p>
 
             <p className="text-white/80 italic text-sm mt-1">
-              (Hibah Kemendiktisaintek Tahun Anggaran 2026)
+              (-)
             </p>
           </div>
         </div>

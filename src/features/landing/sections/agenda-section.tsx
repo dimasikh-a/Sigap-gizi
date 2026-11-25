@@ -17,7 +17,7 @@ export default function AgendaSection({
           {/* Heading */}
           <div className="mb-14 text-center">
             <div className="mb-2 flex items-center justify-center gap-4">
-              <p className="text-teal-600 font-semibold text-3xl">
+              <p className="text-sky-500 font-semibold text-3xl">
                 Agenda Posyandu
               </p>
             </div>
@@ -34,11 +34,11 @@ export default function AgendaSection({
             <div className="flex justify-center">
               <div className="w-full max-w-2xl rounded-[28px] border border-slate-100 bg-white px-6 py-14 text-center shadow-md">
                 
-                <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-teal-50">
+                <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-sky-500">
                   <span className="text-4xl">📅</span>
                 </div>
 
-                <h2 className="mb-2 text-2xl font-bold text-teal-600">
+                <h2 className="mb-2 text-2xl font-bold text-sky-500">
                   Belum Ada Agenda
                 </h2>
 
@@ -73,7 +73,7 @@ export default function AgendaSection({
 
                   {/* Content */}
                   <div className="p-3.5">
-                    <h2 className="mb-2 text-center text-xl font-bold text-teal-600">
+                    <h2 className="mb-2 text-center text-xl font-bold text-sky-500">
                       {item.judul_kegiatan}
                     </h2>
 
@@ -86,7 +86,7 @@ export default function AgendaSection({
 
                     {/* Date */}
                     <div className="flex items-center justify-center">
-                      <div className="inline-flex items-center gap-3 rounded-[10px] bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-md md:px-5 md:py-3">
+                      <div className="inline-flex items-center gap-3 rounded-[10px] bg-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-md md:px-5 md:py-3">
                         <span>📅</span>
 
                         <span>

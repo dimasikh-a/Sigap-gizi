@@ -59,12 +59,6 @@ export default function Sidebar({ status }: Props) {
       show: permission.kegiatan.view,
     },
     {
-      title: "Data Rekomendasi",
-      icon: Star,
-      href: "/admin/dashboard/data-rekomendasi",
-      show: permission.rekomendasi.view,
-    },
-    {
       title: "Data Pemeriksaan",
       icon: Stethoscope,
       href: "/admin/dashboard/data-pemeriksaan",
@@ -80,25 +74,12 @@ export default function Sidebar({ status }: Props) {
   return (
     <aside className="w-[260px] min-h-screen bg-white border-r border-gray-100 shadow-sm flex flex-col px-3 py-3 fixed">
       {/* Logo */}
-      <div className="flex items-center justify-center gap-3">
-        <Image
-          src="/logo-kementerian.png"
-          width={40}
-          height={40}
-          alt="logo"
-          className="w-10 h-10 object-contain"
-        />
-
-        <Image src={bima} alt="logo" className="w-14 h-14 object-contain" />
-
-        <Image src={unm} alt="logo" className="w-10 h-10 object-contain" />
-      </div>
 
       {/* Brand */}
       <div className="mt-4 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">
-          <span className="text-gray-900">Satu Klik</span>{" "}
-          <span className="text-teal-600">Gizi</span>
+          <span className="text-gray-900">SIGAP</span>{" "}
+          <span className="text-sky-500">Gizi</span>
         </h1>
       </div>
 
@@ -118,7 +99,7 @@ export default function Sidebar({ status }: Props) {
               href={item.href}
               className={`group flex items-center gap-2 px-5 py-2 rounded-[5px] transition-all duration-300 ${
                 isActive
-                  ? "bg-teal-600 shadow-lg"
+                  ? "bg-sky-500 shadow-lg"
                   : "hover:bg-gray-50 text-slate-700"
               }`}
             >
@@ -135,7 +116,7 @@ export default function Sidebar({ status }: Props) {
                   className={`${
                     isActive
                       ? "text-white"
-                      : "text-slate-600 group-hover:text-teal-600"
+                      : "text-slate-600 group-hover:text-sky-500"
                   }`}
                 />
               </div>
